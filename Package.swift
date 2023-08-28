@@ -12,9 +12,6 @@ let package = Package(
         .library(name: "THEOplayerSDK", targets: ["THEOplayerSDK"]),
         .library(name: "THEOplayerGoogleCastIntegration", targets: ["THEOplayerGoogleCastIntegration"])
     ],
-    dependencies: [
-        .package(name: "GoogleCast", url: "https://github.com/Danesz/google-cast-sdk-dynamic-xcframework", from: "4.7.1")
-    ],
     targets: [
         .binaryTarget(
             name: "THEOplayerSDK",
