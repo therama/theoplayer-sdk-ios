@@ -10,7 +10,7 @@ let package = Package(
     ],
     products: [
         .library(name: "THEOplayerSDK", targets: ["THEOplayerSDK"]),
-        .library(name: "THEOplayerGoogleCastIntegration", targets: ["THEOplayerGoogleCastIntegration"])
+        .library(name: "THEOplayerGoogleCastIntegration", targets: ["THEOplayerGoogleCastIntegrationTarget"])
     ],
     dependencies: [
         .package(name: "Swifter", url: "https://github.com/httpswift/swifter.git", .exactItem("1.5.0"))
@@ -21,14 +21,14 @@ let package = Package(
             path: "THEOplayerSDK-core/THEOplayerSDK.xcframework"
         ),
         .binaryTarget(
-            name: "THEOplayerGoogleCastIntegrationBinary",
+            name: "THEOplayerGoogleCastIntegration",
             path: "THEOplayer-Integration-GoogleCast/THEOplayerGoogleCastIntegration.xcframework"
         ),
         .target(
-            name: "THEOplayerGoogleCastIntegration",
+            name: "THEOplayerGoogleCastIntegrationTarget",
             dependencies: [
                 "Swifter",
-                .target(name: "THEOplayerGoogleCastIntegrationBinary")
+                .target(name: "THEOplayerGoogleCastIntegration")
             ],
             path: "THEOplayer-Integration-GoogleCast"
         ),
