@@ -21,11 +21,16 @@ let package = Package(
             path: "THEOplayerSDK-core/THEOplayerSDK.xcframework"
         ),
         .binaryTarget(
+            name: "THEOplayerGoogleCastIntegrationBinary",
+            path: "THEOplayer-Integration-GoogleCast/THEOplayerGoogleCastIntegration.xcframework"
+        ),
+        .target(
             name: "THEOplayerGoogleCastIntegration",
             dependencies: [
-                "GoogleCast"
+                "GoogleCast",
+                .target(name: "THEOplayerGoogleCastIntegrationBinary")
             ],
-            path: "THEOplayer-Integration-GoogleCast/THEOplayerGoogleCastIntegration.xcframework"
-        )
+            path: "THEOplayer-Integration-GoogleCast"
+        ),
     ]
 )
