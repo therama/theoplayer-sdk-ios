@@ -30,7 +30,7 @@ let package = Package(
                 "Swifter",
                 .target(name: "THEOplayerGoogleCastIntegration")
             ],
-            path: "THEOplayer-Integration-GoogleCast"
+            path: "THEOplayer-Integration-GoogleCast/THEOplayerGoogleCastIntegration.xcframework"
         ),
     ]
 )
