@@ -13,7 +13,7 @@ let package = Package(
         .library(name: "THEOplayerGoogleCastIntegration", targets: ["THEOplayerGoogleCastIntegration"])
     ],
     dependencies: [
-        .package(name: "GoogleCast", url: "https://github.com/Danesz/google-cast-sdk-dynamic-xcframework", from: "4.7.1")
+        .package(name: "Swifter", url: "https://github.com/httpswift/swifter.git", .exactItem("1.5.0"))
     ],
     targets: [
         .binaryTarget(
@@ -27,7 +27,7 @@ let package = Package(
         .target(
             name: "THEOplayerGoogleCastIntegration",
             dependencies: [
-                "GoogleCast",
+                "Swifter",
                 .target(name: "THEOplayerGoogleCastIntegrationBinary")
             ],
             path: "THEOplayer-Integration-GoogleCast"
